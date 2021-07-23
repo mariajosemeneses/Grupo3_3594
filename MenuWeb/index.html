@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,30 +14,31 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link href="css/styles.css" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <div class=" nav-bg">
         <nav class="nav-principal contenedor">
-            <a href="#">Inicio</a>
+            <a href="bienvenida.html">Inicio</a>
             <a href="#">Modificar Plato</a>
             <a href="#">Eliminar Plato</a>
             <a href="#">Buscar</a>
         </nav>
     </div>
-   
-        <div id="contacto" class="contacto">
 
-            
-            <section class="hero">
-                <div class="contenido-hero">
-                    <h1>Ingresar Platos</h1>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <div id="contacto" class="contacto">
+
+
+        <section class="hero">
+            <div class="contenido-hero">
+                <h1>Ingresar Platos</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />
                       </svg>
-                </div>
-            </section>
-        
+            </div>
+        </section>
+
         <section>
             <form class="formulario" action="#" method="POST">
                 <legend>Ingresa los platos llenando todos los campos</legend>
@@ -54,7 +56,7 @@
                     </div>
                     <div class="campo w-100">
                         <label>Categoría</label>
-                        <input class="input-text" type="text"  placeholder="Categoria del plato">
+                        <input class="input-text" type="text" placeholder="Categoria del plato">
                     </div>
                     <div class="campo w-100">
                         <label>Descripción:</label>
@@ -62,17 +64,18 @@
                         <textarea class="input-text"></textarea>
                     </div>
 
-                    <div class="campo w-100"> 
+                    <div class="campo w-100">
                         <label>Subir imagen del plato:</label>
                         <input type="file" name="imagen1" />
                     </div>
-                </div><!--.contenedor-campos-->
+                </div>
+                <!--.contenedor-campos-->
                 <div class="enviar">
                     <input class="boton" type="submit" value="Agregar">
                 </div>
             </form>
         </section>
-        </div>
+    </div>
     </div>
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
@@ -82,4 +85,5 @@
     </div>
     <script src="popup.js"></script>
 </body>
+
 </html>

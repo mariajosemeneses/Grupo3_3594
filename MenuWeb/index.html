@@ -5,85 +5,139 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ingreso Platos</title>
-    <link rel="stylesheet" href="css/normalize.css">>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="preload" href="css/styles.css" as="style">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-    <link href="css/styles.css" rel="stylesheet">
+    <title>Modificar</title>
+    <link rel="preland" href="css/styleCss.css" as="styleCss">
+    <link href="css/styleCss.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <div class=" nav-bg">
-        <nav class="nav-principal contenedor">
-            <a href="bienvenida.html">Inicio</a>
-            <a href="#">Modificar Plato</a>
-            <a href="#">Eliminar Plato</a>
-            <a href="#">Buscar</a>
-        </nav>
+    <div class="ctn">
+        <p>
+            <img src="img/logo.png" style="float:left " alt=" " class="logo" class="title"><b>MENU</b>
+            <a href="index.html" style="float:right ; margin-right: 20px ">
+                <svg xmlns="http://www.w3.org/2000/svg " class="icon-tabler-logout " width="28 " height="28 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round " stroke-linejoin="round ">
+                                    <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
+                                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2 " />
+                                    <path d="M7 12h14l-3 -3m0 6l3 -3 " />
+                                </svg>
+            </a>
+        </p>
     </div>
 
-    <div id="contacto" class="contacto">
 
-
-        <section class="hero">
-            <div class="contenido-hero">
-                <h1>Ingresar Platos</h1>
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tools-kitchen-2" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                        <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3" />
-                      </svg>
-            </div>
-        </section>
-
+    <div class="contenedor"></div>
+    <button id="btn-abrir-popup" class="btn-abrir-popup">Agregar</button>
+    <main>
         <section>
-            <form class="formulario" action="#" method="POST">
-                <legend>Ingresa los platos llenando todos los campos</legend>
-
-                <div class="contenedor-campos">
-                    <div class="campo">
-                        <label>Nombre  Plato:</label>
-
-                        <input class="input-text" type="text" placeholder="Nombre del Plato" required>
-                    </div>
-                    <div class="campo">
-                        <label>Precio</label>
-
-                        <input class="input-text" type="text" placeholder="Precio del plato">
-                    </div>
-                    <div class="campo w-100">
-                        <label>Categoría</label>
-                        <input class="input-text" type="text" placeholder="Categoria del plato">
-                    </div>
-                    <div class="campo w-100">
-                        <label>Descripción:</label>
-
-                        <textarea class="input-text"></textarea>
-                    </div>
-
-                    <div class="campo w-100">
-                        <label>Subir imagen del plato:</label>
-                        <input type="file" name="imagen1" />
-                    </div>
-                </div>
-                <!--.contenedor-campos-->
-                <div class="enviar">
-                    <input class="boton" type="submit" value="Agregar">
-                </div>
-            </form>
+            <div style="position:relative; top:2rem;">
+                <table class="platos" style="margin: 0 auto;" border="">
+                    <thead>
+                        <tr>
+                            <th>NOMBRE DEL PLATO</th>
+                            <th>PRECIO</th>
+                            <th>CATEGORIA</th>
+                            <th>DESCRIPCIÓN</th>
+                            <th>IMAGEN</th>
+                            <th>OPERACIÓN</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablita">
+                        <tr>
+                            <td>Encebollado</td>
+                            <td>2,50</td>
+                            <td>Mariscos</td>
+                            <td>Va con jugo de mora y sandia</td>
+                            <th><img src="img/encebollado.jpg" class="imgtabla"></th>
+                            <th>
+                                <a class="eliminar" href="#">Eliminar</a>
+                                <a class="actualizar" href="Actualizar.html">Actualizar</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Arroz con pescado</td>
+                            <td>2,00</td>
+                            <td>Mariscos</td>
+                            <td>Va con jugo</td>
+                            <th><img src="img/pescado.jpg" class="imgtabla"></th>
+                            <th>
+                                <a class="eliminar" href="#">Eliminar</a>
+                                <a class="actualizar" href="Actualizar.html">Actualizar</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Arroz con pescado</td>
+                            <td>2,00</td>
+                            <td>Mariscos</td>
+                            <td>Va con jugo</td>
+                            <th><img src="img/pescado.jpg" class="imgtabla"></th>
+                            <th>
+                                <a class="eliminar" href="#">Eliminar</a>
+                                <a class="actualizar" href="Actualizar.html">Actualizar</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Arroz con pescado</td>
+                            <td>2,00</td>
+                            <td>Mariscos</td>
+                            <td>Va con jugo</td>
+                            <th><img src="img/pescado.jpg" class="imgtabla"></th>
+                            <th>
+                                <a class="eliminar" href="#">Eliminar</a>
+                                <a class="actualizar" href="Actualizar.html">Actualizar</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Arroz con pescado</td>
+                            <td>2,00</td>
+                            <td>Mariscos</td>
+                            <td>Va con jugo</td>
+                            <th><img src="img/pescado.jpg" class="imgtabla"></th>
+                            <th>
+                                <a class="eliminar" href="#">Eliminar</a>
+                                <a class="actualizar" href="Actualizar.html">Actualizar</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>Arroz con pescado</td>
+                            <td>2,00</td>
+                            <td>Mariscos</td>
+                            <td>Va con jugo</td>
+                            <th><img src="img/pescado.jpg" class="imgtabla"></th>
+                            <th>
+                                <a class="eliminar" href="#">Eliminar</a>
+                                <a class="actualizar" href="Actualizar.html">Actualizar</a>
+                            </th>
+                        </tr>
+                        </tr>
+                    </tbody>
+                </table>
         </section>
-    </div>
-    </div>
+        </div>
+    </main>
+
     <div class="overlay" id="overlay">
         <div class="popup" id="popup">
             <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3>Se agregado corectamente!!</h3>
+            <h3>Las Delicias de Alissson</h3>
+            <h4>Agregar Plato la Menu</h4>
+            <form action="">
+                <div class="contenedor-inputs">
+                    <input type="text" placeholder="Nombre del plato">
+                    <input type="text" placeholder="Precio">
+                    <input type="text" placeholder="Categoria">
+                    <input type="text" placeholder="Descripcion">
+                    <input type="file" placeholder="Imagen">
+                </div>
+                <input type="submit" class="btn-submit" value="Agregar">
+                <input type="submit" class="btn-submit" href="index.html" value="Inicio">
+            </form>
         </div>
     </div>
-    <script src="popup.js"></script>
+
+
+    <script src=" popup.js "></script>
+
+
 </body>
 
 </html>

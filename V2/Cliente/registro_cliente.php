@@ -8,7 +8,7 @@ include "../conexion.php";
 if(!empty($_POST))
 {
     $aler='';
-    if(empty($_POST['nombre']) || empty($_POST['correo']) || empty($_POST['usuario']) || || empty($_POST['clave']) || || empty($_POST['rol']))  
+    if(empty($_POST['nombre']) || empty($_POST['correo']) || empty($_POST['usuario']) || || empty($_POST['telefono']) || || empty($_POST['direccion']))  
     {
         $aler='<p class="msg_error">Todos los campos son obligatorios.</p>';
 

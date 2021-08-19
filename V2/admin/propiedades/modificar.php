@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <?php
     require '../../includes/config/database.php';
-    $db= conectarDB();
-    $errores = [];
-    if($_SERVER['REQUEST_METHOD'] === 'POST')
-    {
+  $db= conectarDB();
+  $errores = [];
+
+  if($_SERVER['REQUEST_METHOD'] === 'POST')
+  {
       //echo "<pre>";
       //var_dump($_POST);
       //echo "</pre>";
@@ -94,10 +96,8 @@
             }
         }
     }
-
-
-
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -126,6 +126,15 @@
         <div class="contenedor"></div>
         <button id="btn-abrir-popup" class="btn-abrir-popup">Agregar</button>
     <main>
+
+    <?php if( intval( $resultado ) == 1): ?>
+        <p class="alerta_exito">Creado Correctamente</p>
+    <?php elseif( intval( $resultado ) == 2): ?>
+        <p class="alerta_exito">Actualizado Correctamente</p>
+    <?php elseif( intval( $resultado ) == 3): ?>
+        <p class="alerta_exito">Eliminado Correctamente</p>
+    <?php endif; ?>
+
      <div style="position:relative; top:2rem;">
          <table class="platos" style="margin: 0 auto;" border="">
             <thead>

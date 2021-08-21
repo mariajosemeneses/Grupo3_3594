@@ -11,12 +11,18 @@
    //     header('Location: /admin');
    // }
 
+   
+
    require '../../includes/config/database.php';
     $db= conectarDB();
+
+    
 
     $consulta = "SELECT * FROM propiedades WHERE id = ${id}";
     $resultado = mysqli_query($db, $consulta);
     $propiedad = mysqli_fetch_assoc($resultado);
+
+    
 
     $errores = [];
 
@@ -26,81 +32,82 @@
     $descripcion = $propiedad['descripcion'];
     $imagen = $propiedad['imagen'];
 
-  if($_SERVER['REQUEST_METHOD'] === 'POST'){
-      //echo "<pre>";
-      //var_dump($_POST);
-      //echo "</pre>";
-
-     //echo "<pre>";
-     //var_dump($_FILES);
-      //echo "</pre>";
-
-
-    $nombre = mysqli_real_escape_string($db, $_POST['nombre']);
-    $precio = mysqli_real_escape_string($db, $_POST['precio']);
-    $categoria = mysqli_real_escape_string($db, $_POST['categoria']);
-    $descripcion = mysqli_real_escape_string($db, $_POST['descripcion']);
-    //$imagen = mysqli_real_escape_string($db, $_POST['imagen']);
-
-      //Agregar files hacia una variavle
-      //$imagen = $propiedad['imagen'];
-      //var_dump($imagen['name']);
-
-      if(!$nombre){
-        $errores[] = "Debe añadir un nombre";
-      }
-      if(!$precio){
-        $errores[] = "Debe añadir un precio";
-      }
-      if(!$categoria){
-        $errores[] = "Elija una categoria";
-      }
-      if(!$descripcion){
-        $errores[] = "Debe añadir una descripcion";
-      }
-
-    
-
-     //echo "<pre>";
-     //var_dump($errores);
-     //echo "</pre>";
-
-      //Revisar Errores
-      if(empty($errores)) 
-      {
-            //Subida de Archivos
-             //Crear Carpeta
-             //$carpetaImagenes = '../../imagenes';
-             //if(!is_dir($carpetaImagenes)){
-                 //mkdir($carpetaImagenes);
-             //}
-
-             //$nombreImagen = '';
-
-           // if($imagen['name']){
-                //unlink($carpetaImagenes . $propiedad['imagen']);
-                //nombreUnico
-               // $nombreImagen = md5( uniqid( rand(), true)) . ".jpg" ;
-
-                //Subir imagen
-               // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
-            //}else{
-               // $nombreImagen = $propiedad['imagen'];
-            //}
-
-            
-            //insertar en la base de datos
-            $query = "UPDATE propiedades SET nombre = '${nombre}', precio = ${precio}, categoria = '${categoria}', descripcion = '${descripcion}' WHERE id = ${id}";
-
-            echo $query;
-            $resultado = mysqli_query($db, $query);
-
-            if($resultado){
-                header('Location: ../../admin/propiedades/modificar.php');
-            }
+    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+        //echo "<pre>";
+        //var_dump($_POST);
+        //echo "</pre>";
+  
+       //echo "<pre>";
+       //var_dump($_FILES);
+        //echo "</pre>";
+  
+  
+      $nombre = mysqli_real_escape_string($db, $_POST['nombre']);
+      $precio = mysqli_real_escape_string($db, $_POST['precio']);
+      $categoria = mysqli_real_escape_string($db, $_POST['categoria']);
+      $descripcion = mysqli_real_escape_string($db, $_POST['descripcion']);
+      //$imagen = mysqli_real_escape_string($db, $_POST['imagen']);
+  
+        //Agregar files hacia una variavle
+        //$imagen = $propiedad['imagen'];
+        //var_dump($imagen['name']);
+  
+        if(!$nombre){
+          $errores[] = "Debe añadir un nombre";
         }
+        if(!$precio){
+          $errores[] = "Debe añadir un precio";
+        }
+        if(!$categoria){
+          $errores[] = "Elija una categoria";
+        }
+        if(!$descripcion){
+          $errores[] = "Debe añadir una descripcion";
+        }
+  
       
-    } 
+  
+       echo "<pre>";
+       var_dump($errores);
+       echo "</pre>";
+  
+        //Revisar Errores
+        if(empty($errores)) 
+        {
+              //Subida de Archivos
+               //Crear Carpeta
+               //$carpetaImagenes = '../../imagenes';
+               //if(!is_dir($carpetaImagenes)){
+                   //mkdir($carpetaImagenes);
+               //}
+  
+               //$nombreImagen = '';
+  
+             // if($imagen['name']){
+                  //unlink($carpetaImagenes . $propiedad['imagen']);
+                  //nombreUnico
+                 // $nombreImagen = md5( uniqid( rand(), true)) . ".jpg" ;
+  
+                  //Subir imagen
+                 // move_uploaded_file($imagen['tmp_name'], $carpetaImagenes . $nombreImagen);
+              //}else{
+                 // $nombreImagen = $propiedad['imagen'];
+              //}
+  
+              
+              //insertar en la base de datos
+              $query = "UPDATE propiedades SET nombre = '${nombre}', precio = ${precio}, categoria = '${categoria}', descripcion = '${descripcion}' WHERE id = ${id}";
+  
+              echo $query;
+              $resultado = mysqli_query($db, $query);
+  
+              if($resultado){
+                  header('Location: ../../admin/propiedades/modificar.php');
+              }
+          }
+        
+      }
+
 ?>
 
 
@@ -112,7 +119,7 @@
     <link rel = "preland" href="../../css/styleCss.css" as = "styleCss">
     <link href="../../css/styleCss.css" rel = "stylesheet">
 </head>
-<body body topmargin="0 ">
+<body class="stylebody" body topmargin="0 ">
     <div class="ctn">
         <p>
             <img src="../../img/logo.png" style="float:left " alt=" " class="logo" class="title"><b>ACTUALIZAR</b>
@@ -129,21 +136,21 @@
     <main>
         <form class="formulario" style="position:relative; top:3rem;" method="POST" enctype="multipart/form-data">
 
-            <div class="contenedor-campos">
+            <div >
                 <div class="campo">
                     <label>Nombre  Plato:</label>
 
-                    <input class="input-text" type="text"  name= "nombre" required>
+                    <input class="input-text" type="text"  name= "nombre" required value="<?php echo $nombre; ?>">
                 </div>
                 <div class="campo">
                     <label>Precio</label>
 
-                    <input class="input-text" type="text" name= "precio" required>
+                    <input  class="input-text" type="text" name= "precio" required value="<?php echo $precio; ?>">
                 </div>
                 <div class="campo w-100">
                     <label>Categorías</label>
                     <select name= "categoria"> 
-                        <option value = "">Seleccione</option>
+                        <option><?php echo $categoria; ?></option>
                             <option value = "Desayuno">Desayuno</option>
                             <option value = "Almuerzo">Almuerzo</option>
                             <option value = "Plato Fuerte">Plato a la Carta</option>
@@ -152,7 +159,7 @@
                 <div class="campo w-100">
                     <label>Descripción:</label>
 
-                    <textarea class="input-des"  name= "descripcion"></textarea>
+                    <textarea class="input-des"  name= "descripcion"> <?php echo $descripcion; ?> </textarea>
                 </div>
 
                 <div class="img-act">
@@ -173,6 +180,7 @@
         </div>
     </div>
     <script src="popup.js"></script>
+
 </body>
 
 </html>

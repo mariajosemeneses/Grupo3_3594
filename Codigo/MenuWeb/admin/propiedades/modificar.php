@@ -8,6 +8,7 @@
     
     $query = "SELECT * FROM propiedades";
     $resultadoConsulta = mysqli_query($db, $query);
+    
     $resultado = $_GET['resultado'] ?? null;
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_POST['id'];
@@ -20,7 +21,7 @@
             $query = "DELETE FROM propiedades WHERE id = ${id}";
             $resultado = mysqli_query($db, $query);
             if($resultado) {
-               echo"Se borro correctamente";
+                header('Location: ../../admin/propiedades/modificar.php');
             }
         }
     }
@@ -37,7 +38,7 @@
     <link rel = "preland" href="../../css/styleCss.css" as = "styleCss">
     <link href="../../css/styleCss.css" rel = "stylesheet">
 </head>
-<body body topmargin="0 ">
+<body class="stylebody" body topmargin="0 ">
     
             <div class="ctn">
                 <p>
@@ -64,14 +65,14 @@
     <?php endif; ?>
 
      <div style="position:relative; top:2rem;">
-         <table class="platos" style="margin: 0 auto;" border="">
-            <thead>
+         <table class="platos" style="margin: 0 auto;" border="0.9999">
+            <thead class="tab">
                 <tr>
-                    <th>NOMBRE DEL PLATO</th>
-                    <th>PRECIO</th>
-                    <th>CATEGORIA</th>
-                    <th>DESCRIPCIÓN</th>
-                    <th>IMAGEN</th>
+                    <td>NOMBRE DEL PLATO</td>
+                    <td>PRECIO   </td>
+                    <td>CATEGORIA</td>
+                    <td>DESCRIPCIÓN</td>
+                    <td>IMAGEN</td>
                     <th>OPERACIÓN</th>
                 </tr>
             </thead>
@@ -85,11 +86,11 @@
                         <td><?php echo $propiedad['descripcion']; ?></td>
                         <th><img src="/img/<?php echo $propiedad['imagen']; ?>" class="imgtabla"></th>
                         <th>
-                            <form method="POST" class="w-100">  
+                            <a class="actualizar" href="../../../MenuWeb/admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>">Actualizar</a>
+                            <form method="POST">  
                                 <input type="hidden" name="id" value="<?php echo $propiedad['id']; ?>">
                                 <input type="submit" class="eliminar" value="Eliminar">
-                            </form> 
-                            <a class="actualizar" href="../../admin/propiedades/actualizar.php?id=<?php echo $propiedad['id']; ?>">Actualizar</a>
+                            </form>
                         </th>
                     </tr>
                     <?php endwhile; ?>

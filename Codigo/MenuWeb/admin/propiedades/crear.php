@@ -56,10 +56,10 @@
 
             //Subida de Archivos
              //Crear Carpeta
-             $carpetaImagenes = '../../imagenes';
-             if(!is_dir($carpetaImagenes)){
-                 mkdir($carpetaImagenes);
-             }
+             $carpetaImagenes = '../../MenuWeb/imagenes';
+             //if(!is_dir($carpetaImagenes)){
+                // mkdir($carpetaImagenes);
+            // }
             //nombreUnico
              $nombreImagen = md5( uniqid( rand(), true)) . ".jpg";
              //Subir imagen
@@ -69,7 +69,6 @@
             $query = "INSERT INTO propiedades (nombre, precio, descripcion, imagen, categoria)
             VALUES ( '$nombrePlato', '$precio', '$descripcion', '$imagen', '$categoriaId' )";
 
-            // echo $query;
             $resultado = mysqli_query($db, $query);
 
             if($resultado){

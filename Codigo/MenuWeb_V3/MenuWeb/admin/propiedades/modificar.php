@@ -14,11 +14,11 @@
         $id = $_POST['id'];
         $id = filter_var($id, FILTER_VALIDATE_INT);
         if($id) {
-            $query = "SELECT imagen FROM propiedades WHERE id = ${id}";
+            $query = "SELECT imagen FROM propiedades WHERE idpropiedades = ${id}";
             $resultado = mysqli_query($db, $query);
             $propiedad = mysqli_fetch_assoc($resultado);
            // unlink('/' . $propiedad['imagen']);
-            $query = "DELETE FROM propiedades WHERE id = ${id}";
+            $query = "DELETE FROM propiedades WHERE idpropiedades= ${id}";
             $resultado = mysqli_query($db, $query);
             if($resultado) {
                 header('Location: ../../admin/propiedades/modificar.php');

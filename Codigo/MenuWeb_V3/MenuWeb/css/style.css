@@ -8,6 +8,9 @@ body {
 }
 
 .login-box {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 320px;
     height: 420px;
     color: #fff;
@@ -17,6 +20,12 @@ body {
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
+}
+
+.form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .login-box .avatar {
@@ -99,14 +108,14 @@ body {
 
 .ctn-welcome {
     width: 100%;
-    max-width: 2300px;
+    max-width: 2700px;
     text-align: center;
     color: white;
     font-size: 25px;
     padding: 05px;
     margin: 0px;
     margin-top: 0px;
-    background: black;
+    background: rgb(0, 0, 0);
 }
 
 .logo-welcome {

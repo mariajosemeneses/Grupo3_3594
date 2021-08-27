@@ -15,7 +15,7 @@
 
     <div class="ctn-welcome ">
         <p> 
-            <img src="img/logo_w.png " style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>BIENVENIDO</b>
+            <img src="images/logo(1)_opt.png" style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>BIENVENIDO</b>
 
     <a href="login.php " style="float:right ; margin-right: 20px ">
     <svg xmlns="http://www.w3.org/2000/svg " class="icon-tabler-logout " width="28 " height="28 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round " stroke-linejoin="round ">
@@ -31,7 +31,7 @@
 
     <div style="text-align:center " class="ctn-b ">
        
-        <div style="width:100%; height:100%, text-align: center ">
+        <div style="width:100%; height:100%; text-align:center ">
             <p>
 
                 <br>
@@ -49,7 +49,7 @@
         </div>
 
         <div style="text-align:center " class="ctn-b "></div>
-        <div style="width:100%; height:100%, text-align: center ">
+        <div style="width:100%; height:100%; text-align: center ">
             <p>
 
                 <br>
@@ -73,7 +73,7 @@
             </p>
         </div>
 
-          <div style="width:100%; height:100%, text-align: center ">
+          <div style="width:100%; height:100%; text-align: center ">
             <p>
 
                 <br>
@@ -87,7 +87,7 @@
             </p>
         </div>
 
-         <div style="width:100%; height:100%, text-align: center ">
+         <div style="width:100%; height:100%; text-align: center ">
             <p>
 
                 <br>

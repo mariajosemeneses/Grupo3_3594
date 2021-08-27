@@ -22,10 +22,9 @@
     </SCRIPT>
 
     <div class="login-box">
-        <img src="img/logo.png" alt="Logo del restaurante">
+        <img src="images/logo_opt.png" style="width:400px; height:200px " alt="Logo del restaurante">
 
-
-        <form name=form action="bienvenida.php">
+        <form class="form" name=form action="bienvenida.php">
             <!--USERNAME-->
             <label for="username"> Usuario:</label>
             <input type=text name=login placeholder=" Ingrese su Usuario ">

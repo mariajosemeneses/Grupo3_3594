@@ -95,11 +95,7 @@ h1 {
 }
 
 .botondeintercambiar {
-    width: 240px;
-    margin: 35px auto;
-    position: relative;
-    box-shadow: 0 0 6px 0.5px black;
-    border-radius: 30px;
+    text-align: center;
 }
 
 .botoncambiarcaja {
@@ -155,7 +151,7 @@ h1 {
     border: 1px solid black;
     font-size: 16px;
     color: white;
-    background-color: #1C62C1;
+    background-color: #bd8620;
 }
 
 .checkboxvai {

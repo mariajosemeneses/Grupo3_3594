@@ -2,29 +2,43 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>Iniciar sesión</title>
+     <title>Registar</title>
      <link rel="stylesheet" href="estilo_login.css">
      
 </head>
 <body>
+    <div class="ctn-welcome "> 
+        <a href="perfil.php" style="float:left ; margin-left: 20px ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="5" y1="12" x2="11" y2="18" />
+                <line x1="5" y1="12" x2="11" y2="6" />
+            </svg>
+        </a>
+    </div>
+
+  
+        <p style="text-align: center"><font size=10 color="white"><b>REGISTAR</font></b></p>
+	
     <div class="cajafuera">
     <div class="formulariocaja">
-        <div class="botondeintercambiar">
-            <div id="btnvai"></div>
-             <button type="button" class="botoncambiarcaja" onclick="registrovai()" id="vaibtnregistro">registro</button>
+    
+        <div style="text-align: center" class="botondeintercambiar">
+             <a class="logo" onclick="registrovai()" ><img src="img/logo(1)_opt.png" ></a>
 		</div>
 		
 		<!--Formulario para registro -->
         <form id="frmregistro" class="grupo-entradas" method="POST" action="registro.php">
-			<b>&#128231; Correo</b>
+			<b><font size=4 color="white">&#128231; Correo</font></b>
         <input type="email" class="cajaentradatexto" required 
 		name="txtcorreo">
-			<b>&#128274; Contraseña</b>
+			<b><font size=4 color="white">&#128274; Contraseña</font></b>
         <input type="password" class="cajaentradatexto" required name="txtpassword">
-			</i>&#128100;<b> Nombre</b>
+			</i><font size=4 color="white">&#128100;<b> Nombre</font></b>
 			 <input type="text" class="cajaentradatexto" required name="txtnombre">
-        <div class="checkboxvai"><input type="checkbox"> Acepto los términos y condiciones de uso.</div>
-        <button type="submit" class="botonenviar" name="btnregistrox">registro</button>
+        <div class="checkboxvai"><input type="checkbox"> <font size=3 color="white">Acepto los términos y condiciones de uso.</font></div>
+        <button type="submit" class="botonenviar" name="btnregistrox">Registar</button>
         </form>
         </div>
     </div>
@@ -46,14 +60,7 @@
 	
         }
           
-		function abrirform() {
-  document.getElementById("formrecuperar").style.display = "block";
-  
-}
-
-function cancelarform() {
-  document.getElementById("formrecuperar").style.display = "none";
-}
+		
     </script>
 
 </body>

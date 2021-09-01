@@ -14,10 +14,9 @@
         $id = $_POST['id'];
         $id = filter_var($id, FILTER_VALIDATE_INT);
         if($id) {
-            $query = "SELECT imagen FROM login WHERE id = ${id}";
+            $query = "SELECT login FROM login WHERE id = ${id}";
             $resultado = mysqli_query($conn, $query);
             $usuario = mysqli_fetch_assoc($resultado);
-           // unlink('/' . $propiedad['imagen']);
             $query = "DELETE FROM login WHERE id= ${id}";
             $resultado = mysqli_query($conn, $query);
             if($resultado) {
@@ -51,7 +50,7 @@
 
     <div class="ctn-welcome ">
         
-        <img src="images/logo(1)_opt.png" style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>PERFIL DEL ADMINISTRADOR</b>
+        <img src="images/logo(1)_opt.png" style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>DATOS DEL ADMINISTRADOR</b>
 
         <a href="bienvenida.php " style="float:right ; margin-right: 20px ">
             <svg xmlns="http://www.w3.org/2000/svg " class="icon-tabler-logout " width="28 " height="28 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round " stroke-linejoin="round ">
@@ -63,7 +62,17 @@
 
     </div>
 
-    <button id="btn-abrir-popup" class="btn-abrir-popup">Agregar</button>
+    <button id="btn-abrir-popup" class="btn-abrir-popup">
+        <a href="registrar.html">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <circle cx="9" cy="7" r="4" />
+                <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                <path d="M16 11h6m-3 -3v6" />
+            </svg>
+        </a>
+    </button>
+    <p>Agregar nuevo Administrador</p>
 
      <main>
 
@@ -96,7 +105,14 @@
                         <td><?php echo $usuario['pass']; ?></td>
                         
                         <th>
-                            <a class="actualizar" href="actualizarDato.php?id=<?php echo $usuario['id']; ?>">Actualizar</a>
+                            <a class="actualizar" href="actualizarDato.php?id=<?php echo $usuario['id']; ?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-edit" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                    <line x1="16" y1="5" x2="19" y2="8" />
+                                </svg>
+                            </a>
                             <form method="POST">  
                                 <input type="hidden" name="id" value="<?php echo $usuario['id']; ?>">
                                 <input type="submit" class="eliminar" value="Eliminar">

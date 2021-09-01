@@ -8,10 +8,56 @@
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    background: url(../img/bg.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.ctn-welcome {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    max-width: 2700px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding: 05px;
+    margin: 0px;
+    margin-top: 0px;
+    background: rgb(0, 0, 0);
+}
+
+.logo-welcome {
+    width: 150px;
+    margin: 0px;
+    margin-top: 0px;
+}
+
+.button_close {
+    margin-right: 30px;
+    display: block;
+    background: linear-gradient(90deg, #050100, #050100);
+}
+
+.close-sesion {
+    margin: 0px;
+    margin-top: 0;
+    margin-right: 45px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900px;
+}
+
+.icon-tabler-logout {
+    margin: 0px;
+    margin-top: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .pagprincipal {
@@ -127,6 +173,7 @@ h1 {
 }
 
 .caja_popup {
+    margin-top: 100px;
     display: none;
     position: absolute;
     padding: 0;

@@ -16,7 +16,7 @@ if ($nr == 1)
 	}
 else
 	{
-	echo "<script> alert('Datos incorrectos.');window.location= 'index.html' </script>";
+	echo "<script> alert('Datos incorrectos.');window.location= 'login.html' </script>";
 	}
 
 /*VaidrollTeam*/

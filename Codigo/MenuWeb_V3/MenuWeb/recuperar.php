@@ -17,15 +17,15 @@ $tucorreo			= "From: xxxx@gmail.com";
 
 if(mail($paracorreo,$titulo,$mensaje,$tucorreo))
 {
-	echo "<script> alert('Contraseña enviado');window.location= 'index.html' </script>";
+	echo "<script> alert('Contraseña enviado');window.location= 'login.html' </script>";
 }else
 {
-	echo "<script> alert('Error');window.location= 'index.html' </script>";
+	echo "<script> alert('Error');window.location= 'login.html' </script>";
 }
 }
 else
 {
-	echo "<script> alert('Este correo no existe');window.location= 'index.html' </script>";
+	echo "<script> alert('Este correo no existe');window.location= 'login.html' </script>";
 }
 /*VaidrollTeam*/
 ?>

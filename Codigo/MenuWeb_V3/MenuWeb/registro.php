@@ -16,7 +16,7 @@ if ($nr == 0)
 
 if(mysqli_query($conn,$queryregistro))
 {
-	echo "<script> alert('Usuario registrado: $usu');window.location= 'index.html' </script>";
+	echo "<script> alert('Usuario registrado: $usu');window.location= 'perfil.php' </script>";
 }
 else 
 {
@@ -26,7 +26,7 @@ else
 }
 else
 {
-		echo "<script> alert('No puedes registro este correo: $correo');window.location= 'index.html' </script>";
+		echo "<script> alert('No se puede registrar este correo: $correo');window.location= 'perfil.php' </script>";
 }
 /*VaidrollTeam*/
 ?>

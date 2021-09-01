@@ -17,7 +17,7 @@
         <p> 
             <img src="images/logo(1)_opt.png" style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>BIENVENIDO</b>
 
-    <a href="login.php " style="float:right ; margin-right: 20px ">
+    <a href="login.html" style="float:right ; margin-right: 20px ">
     <svg xmlns="http://www.w3.org/2000/svg " class="icon-tabler-logout " width="28 " height="28 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round " stroke-linejoin="round ">
                 <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
                 <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2 " />
@@ -35,7 +35,7 @@
             <p>
 
                 <br>
-                <a href=" # "><svg xmlns="http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-user " width="80 " height="80 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round
+                <a href="perfil.php"><svg xmlns="http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-user " width="80 " height="80 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round
         " stroke-linejoin="round ">
                 <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
                 <circle cx="12 " cy="7 " r="4 " />

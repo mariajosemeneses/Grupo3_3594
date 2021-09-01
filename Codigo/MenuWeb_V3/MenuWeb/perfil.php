@@ -24,9 +24,6 @@
             }
         }
     }
-
-
-
 ?>
 
 <head>
@@ -40,9 +37,9 @@
     <link rel="stylesheet" href="onclick-form-popup.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel = "preland" href="../../css/styleCss.css" as = "styleCss">
-    <link href="../../css/styleCss.css" rel = "stylesheet">
+  
+    <link rel="stylesheet" href="perfil.css">
+    
     <meta name="viewport" content="width"=device=width,user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimun-scale=1.0 ">
 </head>
 
@@ -62,17 +59,22 @@
 
     </div>
 
-    <button id="btn-abrir-popup" class="btn-abrir-popup">
-        <a href="registrar.html">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+
+  <div class="agregar">
+        <p> 
+        <a href="registrar.html" style="float:right ; margin-right: 20px " class="botton"> 
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user-plus" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                 <circle cx="9" cy="7" r="4" />
                 <path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                 <path d="M16 11h6m-3 -3v6" />
             </svg>
         </a>
-    </button>
-    <p>Agregar nuevo Administrador</p>
+        </p>
+        <p style="margin:2.8% 0; float:right" class="add"><b>Agregar nuevo administrador</b></p>
+    </div>
+    
+   
 
      <main>
 
@@ -84,8 +86,8 @@
         <p class="alerta_exito">Eliminado Correctamente</p>
     <?php endif; ?>
 
-     <div style="position:relative; top:2rem;">
-         <table class="platos" style="margin: 0 auto;" border="0.9999">
+    <div style="position:relative; top:2rem;">
+        <table class="datos" style="margin: 0 auto;" border="0.9999">
             <thead class="tab">
                 <tr>
                     <td>Id</td>
@@ -121,8 +123,8 @@
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
-            </table>
-      </div>
+        </table>
+    </div>
     </main>
 </body>
 </html>

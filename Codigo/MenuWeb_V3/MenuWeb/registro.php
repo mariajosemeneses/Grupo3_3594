@@ -16,7 +16,7 @@ if ($nr == 0)
 
 if(mysqli_query($conn,$queryregistro))
 {
-	echo "<script> alert('Usuario registrado: $usu');window.location= 'perfil.php' </script>";
+	echo "<script> window.location= 'perfil.php' </script>";
 }
 else 
 {

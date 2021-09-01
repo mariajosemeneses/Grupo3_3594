@@ -47,7 +47,7 @@
 
     <div class="ctn-welcome ">
         
-        <img src="images/logo(1)_opt.png" style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>DATOS DEL ADMINISTRADOR</b>
+        <img src="img/logo(1)_opt.png" style="float:left " alt=" " class="logo-welcome " class="title-welcome "><b>DATOS DEL ADMINISTRADOR</b>
 
         <a href="bienvenida.php " style="float:right ; margin-right: 20px ">
             <svg xmlns="http://www.w3.org/2000/svg " class="icon-tabler-logout " width="28 " height="28 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round " stroke-linejoin="round ">

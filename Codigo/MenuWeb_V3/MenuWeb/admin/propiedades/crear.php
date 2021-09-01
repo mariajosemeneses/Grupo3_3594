@@ -112,7 +112,7 @@
 <body>
     <div class=" nav-bg">
         <nav class="nav-principal contenedor">
-            <a href="../../bienvenida.php">Inicio</a>
+            <a href="../../login/bienvenida.php">Inicio</a>
             <a href="../../admin/propiedades/modificar.php">Lista de Platos</a>
         </nav>
     </div>

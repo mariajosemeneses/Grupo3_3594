@@ -1,0 +1,172 @@
+ @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+ }
+ 
+ body {
+     margin: 0;
+     padding: 0;
+     background: url("img/bg.jpg") no-repeat center top;
+     background-size: cover;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .pagprincipal {
+     width: 380px;
+     height: 500px;
+     position: relative;
+     margin: 10% auto;
+     padding: 2px;
+     overflow: hidden;
+     text-align: center;
+ }
+ 
+ .cajafuera {
+     width: 100vw;
+     height: 100vh;
+     display: grid;
+ }
+ 
+ .formulariocaja {
+     width: 400px;
+     height: 500px;
+     position: relative;
+     margin: auto;
+     background: transparent;
+     padding: 2px;
+     overflow: hidden;
+     border: 1px solid transparent;
+     border-radius: 2px;
+     background: transparent;
+ }
+ 
+ h1 {
+     font-size: 40px;
+ }
+ 
+ .logovai {
+     text-align: center;
+ }
+ 
+ .cajaentradatexto {
+     width: 100%;
+     padding: 8px 10px;
+     margin: 10px 0 10px 0;
+     font-size: 16px;
+     border-radius: 5px;
+     border: 1px solid rgb(228, 135, 29);
+ }
+ 
+ .botonenviar {
+     width: 100%;
+     padding: 10px 30px;
+     cursor: pointer;
+     display: block;
+     margin: auto;
+     border: 0;
+     outline: none;
+     border-radius: 10px;
+     border: 1px solid black;
+     font-size: 16px;
+     color: white;
+     background-color: rgb(228, 135, 29);
+ }
+ 
+ .checkboxvai {
+     margin: 5px 10px 24px 0;
+     text-align: right;
+     font-size: 12px;
+ }
+ 
+ .checkboxvai a {
+     color: white;
+     font-size: 16px;
+ }
+ 
+ #frmlogin {
+     left: 50px;
+ }
+ 
+ .caja_popup {
+     margin-top: 100px;
+     display: none;
+     position: absolute;
+     padding: 0;
+     background-color: rgba(0, 0, 0, 0.5);
+     width: 100%;
+     height: 100%;
+ }
+ 
+ .contenedor_popup {
+     border-radius: 5px;
+     top: 10%;
+     left: 50%;
+     position: absolute;
+     transform: translate(-50%, -50%);
+     width: 400px;
+     border-radius: 5px;
+     transition: all 0.2s;
+ }
+ 
+ a {
+     text-decoration-line: underline;
+     cursor: pointer;
+ }
+ 
+ table {
+     text-align: center;
+     width: 98%;
+     border-collapse: collapse;
+     border: 3px solid rgb(168, 102, 16);
+     margin: 50px auto;
+     background: rgb(0, 0, 0);
+ }
+ 
+ th {
+     background: rgb(228, 135, 29);
+     height: 40px;
+     font-weight: lighter;
+     text-shadow: 0 1px 0 rgb(228, 135, 29);
+     ;
+     color: white;
+     border: 1px solid rgb(228, 135, 29);
+     ;
+     box-shadow: inset 0px 1px 2px rgb(228, 135, 29);
+     ;
+     transition: all 0.2s;
+     font-size: 18px;
+ }
+ 
+ tr {
+     border-bottom: 1px solid #cccccc;
+     width: 100%;
+ }
+ 
+ td {
+     border: 1px solid #cccccc;
+     padding: 10px;
+     transition: all 0.2s;
+     font-size: 14px;
+ }
+ 
+ td b {
+     color: white;
+ }
+ 
+ .txtrecuperar {
+     font-size: 14px;
+     text-align: center;
+     width: 100px;
+     display: inline-block;
+     background-color: rgb(228, 135, 29);
+     padding: 6px 10px;
+     border-radius: 5px;
+     color: white;
+     border: 1px solid black;
+     cursor: pointer;
+ }

@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Iniciar sesión</title>
+     <link rel="stylesheet" href="estilo_login.css">
+     
+</head>
+<body>
+    <div class="cajafuera">
+    <div class="formulariocaja">
+        <div class="botondeintercambiar">
+            <div id="btnvai"></div>
+             <button type="button" class="botoncambiarcaja" onclick="registrovai()" id="vaibtnregistro">registro</button>
+		</div>
+		
+		<!--Formulario para registro -->
+        <form id="frmregistro" class="grupo-entradas" method="POST" action="registro.php">
+			<b>&#128231; Correo</b>
+        <input type="email" class="cajaentradatexto" required 
+		name="txtcorreo">
+			<b>&#128274; Contraseña</b>
+        <input type="password" class="cajaentradatexto" required name="txtpassword">
+			</i>&#128100;<b> Nombre</b>
+			 <input type="text" class="cajaentradatexto" required name="txtnombre">
+        <div class="checkboxvai"><input type="checkbox"> Acepto los términos y condiciones de uso.</div>
+        <button type="submit" class="botonenviar" name="btnregistrox">registro</button>
+        </form>
+        </div>
+    </div>
+    <script>
+    var y = document.getElementById("frmregistro");
+    var z = document.getElementById("btnvai");
+	var textcolor2=document.getElementById("vaibtnregistro");
+	textcolor1.style.color="white";
+	textcolor2.style.color="black";
+
+        function registrovai()
+		{
+			
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+			textcolor1.style.color="black";
+			textcolor2.style.color="white";
+	
+        }
+          
+		function abrirform() {
+  document.getElementById("formrecuperar").style.display = "block";
+  
+}
+
+function cancelarform() {
+  document.getElementById("formrecuperar").style.display = "none";
+}
+    </script>
+
+</body>
+</html>

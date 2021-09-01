@@ -1,4 +1,4 @@
-?>
+
 <?php
 # Es responsabilidad del programador hacer algo con los productos
 include_once "funciones.php";

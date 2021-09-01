@@ -1,4 +1,4 @@
-?>
+
 <?php include_once "encabezado.php" ?>
 <?php
 include_once "funciones.php";
@@ -43,7 +43,7 @@ if (count($productos) <= 0) {
                             <td>$<?php echo number_format($producto->precio, 2) ?></td>
                             <td>
                                 <form action="eliminar_del_carrito.php" method="post">
-                                    <input type="hidden" name="id_producto" value="<?php echo $producto->id ?>">
+                                    <input type="hidden" name="idPropiedades" value="<?php echo $producto->idpropiedades ?>">
                                     <input type="hidden" name="redireccionar_carrito">
                                     <button class="button is-danger">
                                         <i class="fa fa-trash-o"></i>

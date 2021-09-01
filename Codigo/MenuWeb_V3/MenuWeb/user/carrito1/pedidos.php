@@ -25,16 +25,13 @@
             }
         }
     }
-
-
-
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MENU</title>
+    <title>MENU DEL DÍA</title>
     <link rel = "preland" href="../../css/styleCss.css" as = "styleCss">
     <link href="../../css/styleCss.css" rel = "stylesheet">
 </head>
@@ -52,17 +49,9 @@
                     </a>
                 </p>
             </div>
-        <div class="contenedor"></div>
-        
+ 
     <main>
 
-    <?php if( intval( $resultado ) == 1): ?>
-        <p class="alerta_exito">Creado Correctamente</p>
-    <?php elseif( intval( $resultado ) == 2): ?>
-        <p class="alerta_exito">Actualizado Correctamente</p>
-    <?php elseif( intval( $resultado ) == 3): ?>
-        <p class="alerta_exito">Eliminado Correctamente</p>
-    <?php endif; ?>
 
      <div style="position:relative; top:2rem;">
          <table class="platos" style="margin: 0 auto;" border="0.9999">
@@ -75,7 +64,8 @@
                     <td>IMAGEN</td>
                     <th>OPERACIÓN</th>
                 </tr>
-            </thead>
+             </thead>
+            
                 <tbody id="tablita">
                     
                     <?php while($propiedad = mysqli_fetch_assoc($resultadoConsulta)):?>
@@ -86,53 +76,54 @@
                         <td><?php echo $propiedad['descripcion']; ?></td>
                         <th><img src="../../imagenes/<?php echo $propiedad['imagen']; ?>" class="imgtabla"></th>
                         <th>
-                            <a class="actualizar" href="../../../MenuWeb/admin/propiedades/actualizar.php?id=<?php echo $propiedad['idpropiedades']; ?>">Actualizar</a>
-                            <form method="POST">  
-                                <input type="hidden" name="id" value="<?php echo $propiedad['idpropiedades']; ?>">
-                                <input type="submit" class="eliminar" value="Eliminar">
-                            </form>
+                         <button id="btn-abrir-popup" class="btn-abrir-popup">Agregar</button>
                         </th>
                     </tr>
                     <?php endwhile; ?>
                 </tbody>
             </table>
       </div>
-    </main>
-    <div class="overlay" id="overlay">
-       
-        <div class="popup" id="popup">
-            <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-            <h3>Las Delicias de Alissson</h3>
-            <h4>Agregar Plato la Menu</h4>
-             <?php foreach ($errores as $error): ?>
-            <div class="alerta-error">
-            <?php echo $error; ?> 
-            </div>
-            <?php endforeach; ?>
-            <form action="" method="POST" action="#" enctype="multipart/form-data">
-                
-                <div class="contenedor-inputs">
-                    <input class="input-text" type="text"  name= "nombrePlato" placeholder="Nombre del Plato" required>
-                    <input class="input-text" type="text" name= "precio" placeholder="Precio del Plato">
-                    <div>
-                       <label>Categorías</label>
-                        <select name= "categoria"> 
-                            <option value = "">Seleccione</option>
-                            <option value = "Desayuno">Desayuno</option>
-                            <option value = "Almuerzo">Almuerzo</option>
-                            <option value = "Plato Fuerte">Plato Fuerte</option>
-                        </select> 
-                    </div>
-                    <textarea class="input-text"  name= "descripcion" placeholder="Descripcion del Plato"></textarea>
-                    <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen" />
-                </div>
-                <input type="submit" class="btn-submit" value="Agregar">
-                <input type="submit" class="btn-submit" href="modificar.php" value="Cancelar">
-            </form>
-        </div>
-    </div>
-    <script src="popup.js"></script>
-        
-</body>
-</html>
+      <div class="popup" id="popup"> 
+       <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <form  action="" class="formulario" action="#" style="position:relative; top:3rem;" method="POST" enctype="multipart/form-data">
 
+            <div class="contenedor-campos">
+                <div class="campo">
+                    <label>Nombre  Plato:</label>
+                    <td><?php echo $nombre; ?><td\>
+                    
+                </div>
+                <div class="campo">
+                    <label>Precio</label>
+                    <th><?php echo $precio; ?><th\>
+                    
+                </div>
+                 <div class="campo w-100">
+                    <label>Categorías</label>
+                    
+                        <th> <?php echo $categoria; ?></th>
+                    
+                </div> 
+
+                <div class="campo w-100">
+                    <label>Descripción:</label>
+
+                    <ht> <?php echo $descripcion; ?> </th>
+                </div>
+
+                <div class="img-act">
+                    <label>Imagen:</label>
+                    <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen" />
+                    <img src="../../imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen">
+                </div>
+            </div>
+
+            <div class="enviar">
+               <input type="submit" class="btn-submit" value="Agregar Carrito">
+               <input type="submit" class="btn-submit" href="modificar.php" value="Cancelar">
+            </div>
+        </form>
+     </div>
+     <script src="popup.js"></script>
+    </main>
+   

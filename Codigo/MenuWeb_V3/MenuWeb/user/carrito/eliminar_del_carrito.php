@@ -1,10 +1,10 @@
 ?>
 <?php
 include_once "funciones.php";
-if (!isset($_POST["id"])) {
-    exit("No hay id");
+if (!isset($_POST["idPropiedades"])) {
+    exit("No hay idPropiedades");
 }
-quitarProductoDelCarrito($_POST["id"]);
+quitarProductoDelCarrito($_POST["idPropiedades"]);
 # Saber si redireccionamos a tienda o al carrito, esto es porque
 # llamamos a este archivo desde la tienda y desde el carrito
 if (isset($_POST["redireccionar_carrito"])) {

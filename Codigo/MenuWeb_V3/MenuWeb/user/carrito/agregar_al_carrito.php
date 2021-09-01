@@ -1,8 +1,9 @@
 ?>
+
 <?php
 include_once "funciones.php";
-if (!isset($_POST["id"])) {
-    exit("No hay id");
+if (!isset($_POST["idPropiedades"])) {
+    exit("No hay idPropiedades");
 }
-agregarProductoAlCarrito($_POST["id"]);
+agregarProductoAlCarrito($_POST["idPropiedades"]);
 header("Location: tienda.php");

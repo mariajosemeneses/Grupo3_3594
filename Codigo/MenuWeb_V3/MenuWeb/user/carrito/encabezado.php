@@ -6,13 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de compras con PHP y MySQL - By Parzibyte</title>
-    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
 
-    <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+    <!-- <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
             <a class="navbar-item" href="https://parzibyte.me/blog">
                 <img alt="" src="https://raw.githubusercontent.com/parzibyte/ejemplo-mern/master/src/img/parzibyte_logo.png" style="max-height: 80px" />
@@ -22,10 +22,10 @@
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </button>
-        </div>
+        </div> -->
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="productos.php">Productos</a>
+               <!--  <a class="navbar-item" href="productos.php">Productos</a> -->
                 <a class="navbar-item" href="tienda.php">Tienda</a>
             </div>
             <div class="navbar-end">

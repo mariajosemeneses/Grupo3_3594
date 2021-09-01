@@ -34,7 +34,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MENU</title>
+    <title>MENU DEL DÍa</title>
     <link rel = "preland" href="../../css/styleCss.css" as = "styleCss">
     <link href="../../css/styleCss.css" rel = "stylesheet">
 </head>
@@ -53,7 +53,7 @@
                 </p>
             </div>
         <div class="contenedor"></div>
-        
+        <button id="btn-abrir-popup" class="btn-abrir-popup">Añadir a carrito</button>
     <main>
 
     <?php if( intval( $resultado ) == 1): ?>

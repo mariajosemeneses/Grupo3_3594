@@ -1,61 +1,60 @@
-?>
 <?php
 
-function obtenerpropiedadesEnCarrito()
+function obtenerProductosEnCarrito()
 {
     $bd = obtenerConexion();
     iniciarSesionSiNoEstaIniciada();
-    $sentencia = $bd->prepare("SELECT propiedades.id, propiedades.nombre, propiedades.descripcion, propiedades.precio, propiedades.imagen, propiedades.administradorId, propiedades.clienteId
+    $sentencia = $bd->prepare("SELECT propiedades.idpropiedades, propiedades.nombre, propiedades.descripcion, propiedades.precio
      FROM propiedades
-     INNER JOIN pedidos
-     ON propiedades.id = pedidos.id
-     WHERE pedidos.clienteId = ?");
-    $idSesion = clienteId();
+     INNER JOIN carritoc
+     ON propiedades.idpropiedades = carritoc.idPropiedades
+     WHERE carritoc.idsesion = ?");
+    $idSesion = session_id();
     $sentencia->execute([$idSesion]);
     return $sentencia->fetchAll();
 }
-function quitarProductoDelCarrito($id)
+function quitarProductoDelCarrito($idProducto)
 {
     $bd = obtenerConexion();
     iniciarSesionSiNoEstaIniciada();
-    $idSesion = clienteId();
-    $sentencia = $bd->prepare("DELETE FROM pedidos WHERE clienteId = ? AND id = ?");
-    return $sentencia->execute([$idSesion, $id]);
+    $idSesion = session_id();
+    $sentencia = $bd->prepare("DELETE FROM carritoc WHERE idsesion = ? AND idPropiedades = ?");
+    return $sentencia->execute([$idSesion, $idProducto]);
 }
 
-function obtenerpropiedades()
+function obtenerProductos()
 {
     $bd = obtenerConexion();
-    $sentencia = $bd->query("SELECT id, nombre, descripcion, precio, imagen, administradorId, clienteId FROM propiedades");
+    $sentencia = $bd->query("SELECT idpropiedades, nombre, descripcion, precio FROM propiedades");
     return $sentencia->fetchAll();
 }
-function productoYaEstaEnCarrito($id)
+function productoYaEstaEnCarrito($idProducto)
 {
-    $ids = obtenerIdsDepropiedadesEnCarrito();
-    foreach ($ids as $idd) {
-        if ($idd == $id) return true;
+    $ids = obtenerIdsDeProductosEnCarrito();
+    foreach ($ids as $idpropiedades) {
+        if ($idpropiedades == $idProducto) return true;
     }
     return false;
 }
 
-function obtenerIdsDepropiedadesEnCarrito()
+function obtenerIdsDeProductosEnCarrito()
 {
     $bd = obtenerConexion();
     iniciarSesionSiNoEstaIniciada();
-    $sentencia = $bd->prepare("SELECT id FROM pedidos WHERE clienteId = ?");
+    $sentencia = $bd->prepare("SELECT idPropiedades FROM carritoc WHERE idsesion = ?");
     $idSesion = session_id();
     $sentencia->execute([$idSesion]);
     return $sentencia->fetchAll(PDO::FETCH_COLUMN);
 }
 
-function agregarProductoAlCarrito($id)
+function agregarProductoAlCarrito($idProducto)
 {
     // Ligar el id del producto con el usuario a través de la sesión
     $bd = obtenerConexion();
     iniciarSesionSiNoEstaIniciada();
     $idSesion = session_id();
-    $sentencia = $bd->prepare("INSERT INTO pedidos(clienteId, id) VALUES (?, ?)");
-    return $sentencia->execute([$idSesion, $id]);
+    $sentencia = $bd->prepare("INSERT INTO carritoc(idsesion, idPropiedades) VALUES (?, ?)");
+    return $sentencia->execute([$idSesion, $idProducto]);
 }
 
 
@@ -66,19 +65,19 @@ function iniciarSesionSiNoEstaIniciada()
     }
 }
 
-// function eliminarProducto($id)
-// {
-//     $bd = obtenerConexion();
-//     $sentencia = $bd->prepare("DELETE FROM propiedades WHERE id = ?");
-//     return $sentencia->execute([$id]);
-// }
+/* function eliminarProducto($idpropiedades)
+{
+    $bd = obtenerConexion();
+    $sentencia = $bd->prepare("DELETE FROM propiedades WHERE idpropiedades = ?");
+    return $sentencia->execute([$idpropiedades]);
+}
 
-// function guardarProducto($nombre, $precio, $descripcion)
-// {
-//     $bd = obtenerConexion();
-//     $sentencia = $bd->prepare("INSERT INTO propiedades(nombre, precio, descripcion) VALUES(?, ?, ?)");
-//     return $sentencia->execute([$nombre, $precio, $descripcion]);
-// }
+function guardarProducto($nombre, $precio, $descripcion)
+{
+    $bd = obtenerConexion();
+    $sentencia = $bd->prepare("INSERT INTO propiedades(nombre, precio, descripcion) VALUES(?, ?, ?)");
+    return $sentencia->execute([$nombre, $precio, $descripcion]);
+} */
 
 function obtenerVariableDelEntorno($key)
 {

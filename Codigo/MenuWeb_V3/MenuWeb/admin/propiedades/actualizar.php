@@ -11,6 +11,8 @@
 
    require '../../includes/config/database.php';
     $db= conectarDB();
+    $categoriaV="SELECT * FROM categoria";
+    $resultadoV= mysqli_query($db,$categoriaV);
 
     $consulta = "SELECT * FROM propiedades WHERE idpropiedades = ${id}";
     $resultado = mysqli_query($db, $consulta);
@@ -23,6 +25,8 @@
     $categoria = $propiedad['categoriaId'];
     $descripcion = $propiedad['descripcion'];
     $imagen = $propiedad['imagen'];
+
+   
 
   if($_SERVER['REQUEST_METHOD'] === 'POST'){
       //echo "<pre>";
@@ -138,15 +142,21 @@
 
                     <input class="input-text" type="text" name= "precio" required value="<?php echo $precio; ?>">
                 </div>
-                 <div class="campo w-100">
-                    <label>Categorías</label>
-                    <select name= "categoria"> 
-                        <option> <?php echo $categoria; ?></option>
-                            <option value = "Desayuno">Desayuno</option>
-                            <option value = "ALmuerzo">Almuerzo</option>
-                            <option value = "Plato a la Carta">Plato a la Carta</option>
-                    </select>
-                </div> 
+
+                <div class="campo w-100">
+                        <label>Categoria:</label>
+                        <select name= "categoria"> 
+                         <option><?php echo $categoria; ?></option>
+                         <?php while($categoriaC = mysqli_fetch_assoc($resultadoV)) :?>
+                            <?php echo "fhf";?>
+                               <option <?php echo $categoria === $categoriaC['idcategoria'] ? 'selected' : '';?> 
+                                value="<?php echo $categoriaC['nombre'];?>"> <?php echo $categoriaC['nombre'];?>
+                                </option>
+                            <?php endwhile;?>
+                        </select>
+                    </div> 
+                        </select>
+                    </div> 
 
                 <div class="campo w-100">
                     <label>Descripción:</label>
@@ -154,15 +164,16 @@
                     <textarea class="input-des"  name= "descripcion"> <?php echo $descripcion; ?> </textarea>
                 </div>
 
-                <div class="img-act">
+                
+
+            <div class="enviar">
+                <input class="boton" type="submit" value="Actualizar">
+            </div>
+            <div class="img-act">
                     <label>Imagen:</label>
                     <input type="file" id="imagen" accept="image/jpeg, image/png" name="imagen" />
                     <img src="../../imagenes/<?php echo $propiedad['imagen']; ?>" class="imagen">
                 </div>
-            </div>
-
-            <div class="enviar">
-                <input class="boton" type="submit" value="Actualizar">
             </div>
         </form>
     </main>

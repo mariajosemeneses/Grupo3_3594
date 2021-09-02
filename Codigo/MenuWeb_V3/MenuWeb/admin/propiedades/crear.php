@@ -173,9 +173,9 @@
                         <label>CATEGORIA:</label>
                         <select name= "categoria"> 
                          <option value = "">Seleccione</option>
-                            <?php while($categoria = mysqli_fetch_assoc($resultado)) :?>
-                               <option <?php echo $categoriaId === $categoria['idcategoria'] ? 'selected' : '';?> 
-                                value="<?php echo $categoria['idcategoria'];?>"> <?php echo $categoria['nombre'];?>
+                            <?php while($categoriaC = mysqli_fetch_assoc($resultado)) :?>
+                               <option <?php echo $categoriaId === $categoriaC['idcategoria'] ? 'selected' : '';?> 
+                                value="<?php echo $categoriaC['nombre'];?>"> <?php echo $categoriaC['nombre'];?>
                                 </option>
                             <?php endwhile;?>
                         </select>

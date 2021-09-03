@@ -1,0 +1,67 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Registar</title>
+     <link rel="stylesheet" href="estilo_login.css">
+     
+</head>
+<body>
+    <div class="ctn-welcome "> 
+        <a href="perfil.php" style="float:left ; margin-left: 20px ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="5" y1="12" x2="11" y2="18" />
+                <line x1="5" y1="12" x2="11" y2="6" />
+            </svg>
+        </a>
+    </div>
+
+  
+        <p style="text-align: center"><font size=10 color="white"><b>REGISTAR</font></b></p>
+	
+    <div class="cajafuera">
+    <div class="formulariocaja">
+    
+        <div style="text-align: center" class="botondeintercambiar">
+             <a class="logo" onclick="registrovai()" ><img src="img/logo(1)_opt.png" ></a>
+		</div>
+		
+		<!--Formulario para registro -->
+        <form id="frmregistro" class="grupo-entradas" method="POST" action="registro.php">
+			<b><font size=4 color="white">&#128231; Correo</font></b>
+        <input type="email" class="cajaentradatexto" required 
+		name="txtcorreo">
+			<b><font size=4 color="white">&#128274; Contraseña</font></b>
+        <input type="password" class="cajaentradatexto" required name="txtpassword">
+			</i><font size=4 color="white">&#128100;<b> Nombre</font></b>
+			 <input type="text" class="cajaentradatexto" required name="txtnombre">
+        <div class="checkboxvai"><input type="checkbox" required > <font size=3 color="white">Acepto los términos y condiciones de uso.</font></div>
+        <button type="submit" class="botonenviar" name="btnregistrox">Registar</button>
+        </form>
+        </div>
+    </div>
+    <script>
+    var y = document.getElementById("frmregistro");
+    var z = document.getElementById("btnvai");
+	var textcolor2=document.getElementById("vaibtnregistro");
+	textcolor1.style.color="white";
+	textcolor2.style.color="black";
+
+        function registrovai()
+		{
+			
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+			textcolor1.style.color="black";
+			textcolor2.style.color="white";
+	
+        }
+          
+		
+    </script>
+
+</body>
+</html>

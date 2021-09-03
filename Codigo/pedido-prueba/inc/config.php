@@ -1,7 +1,7 @@
 <?php
-$dsn = 'mysql:dbname=platos;host=localhost';
+$dsn = 'mysql:dbname=tshirt_cart;host=localhost';
 $user = 'root';
-$password = 'clave';
+$password = '';
 
 try
 {

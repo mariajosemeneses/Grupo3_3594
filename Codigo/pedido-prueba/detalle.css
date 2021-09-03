@@ -1,0 +1,144 @@
+ @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+ }
+ 
+ body {
+     margin: 0;
+     padding: 0;
+     background: url('bg.jpg') no-repeat center top;
+     background-size: cover;
+     font-family: sans-serif;
+     height: 100vh;
+ }
+ 
+ .ctn-welcome {
+     width: 100%;
+     max-width: 2700px;
+     text-align: center;
+     color: white;
+     font-size: 25px;
+     padding: 05px;
+     margin: 0px;
+     margin-top: 0px;
+     background: rgb(0, 0, 0);
+ }
+ 
+ .logo-welcome {
+     width: 150px;
+     margin: 0px;
+     margin-top: 0px;
+ }
+ 
+ .botton {
+     margin-right: 30px;
+     display: block;
+     background: linear-gradient(90deg, #050100, #050100);
+ }
+ 
+ .close-sesion {
+     margin: 0px;
+     margin-top: 0;
+     margin-right: 45px;
+     color: white;
+     font-size: 12px;
+     font-weight: 900px;
+ }
+ 
+ .btn-abrir-popup {
+     margin-right: 80px;
+     margin-top: 50px;
+     margin-bottom: 20px;
+     height: 40px;
+     line-height: 40px;
+     border: none;
+     color: rgb(0, 0, 0);
+     background: #050704;
+     border-radius: 3px;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 16px;
+     cursor: pointer;
+     transition: .3s ease all;
+     cursor: pointer;
+ }
+ 
+ .add {
+     margin-top: 100px;
+     font-size: 17px;
+     color: rgb(255, 255, 255);
+ }
+ 
+ .agregar {
+     width: 100%;
+     max-width: 3000px;
+     color: white;
+     font-size: 25px;
+     padding: 05px;
+     margin: 0px;
+     margin-top: 15px;
+     background: transparent;
+ }
+ 
+ table.datos {
+     text-align: center;
+     table-layout: fixed;
+     border-collapse: collapse;
+     margin-top: 4rem;
+     width: 92%;
+     border-spacing: 20px;
+     -webkit-box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+     -moz-box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+     box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+     background-color: rgb(77, 72, 72);
+     border-radius: .8rem;
+     color: rgb(0, 0, 0);
+ }
+ 
+ thead {
+     background-color: rgb(17, 17, 17);
+ }
+ 
+ td {
+     color: rgb(255, 255, 255);
+     padding: 1rem;
+     text-align: left;
+ }
+ 
+ th {
+     color: rgb(255, 255, 255);
+     padding: 1rem;
+     text-align: left;
+ }
+ 
+ .actualizar {
+     background-color: transparent;
+     color: rgb(0, 0, 0);
+     padding: 0.3rem 0.3rem;
+     font-size: 0.7rem;
+     text-decoration: none;
+     text-transform: uppercase;
+     font-weight: bold;
+     border-radius: .2rem;
+     float: right;
+     width: 47%;
+     margin-right: 0px;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+     overflow: auto;
+ }
+ 
+ .eliminar {
+     background-color: rgb(221, 31, 31);
+     color: rgb(0, 0, 0);
+     padding: 0.2rem 0.3rem;
+     text-transform: uppercase;
+     font-weight: bold;
+     border-radius: .2rem;
+     float: left;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: 12px;
+ }

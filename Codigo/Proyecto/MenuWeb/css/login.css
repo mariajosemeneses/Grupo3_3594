@@ -1,0 +1,241 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url(../img/bg.jpg) no-repeat center top;
+    background-size: cover;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.ctn-welcome {
+    width: 100%;
+    max-width: 2700px;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding: 05px;
+    margin: 0px;
+    margin-top: 0px;
+    background: rgb(0, 0, 0);
+}
+
+.logo-welcome {
+    width: 150px;
+    margin: 0px;
+    margin-top: 0px;
+}
+
+.button_close {
+    margin-right: 30px;
+    display: block;
+    background: linear-gradient(90deg, #050100, #050100);
+}
+
+.close-sesion {
+    margin: 0px;
+    margin-top: 0;
+    margin-right: 45px;
+    color: white;
+    font-size: 12px;
+    font-weight: 900px;
+}
+
+.icon-tabler-logout {
+    margin: 0px;
+    margin-top: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.pagprincipal {
+    width: 380px;
+    height: 500px;
+    position: relative;
+    margin: 10% auto;
+    padding: 2px;
+    overflow: hidden;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.cajafuera {
+    background: #f3f3f3;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+.formulariocaja {
+    width: 400px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    background: white;
+    padding: 2px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 2px;
+    background: white;
+}
+
+.botondeintercambiar {
+    text-align: center;
+}
+
+.botoncambiarcaja {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#btnvai {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 130px;
+    height: 100%;
+    background-color: #1C62C1;
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.logovai {
+    text-align: center;
+}
+
+.grupo-entradas {
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.cajaentradatexto {
+    width: 100%;
+    padding: 8px 10px;
+    margin: 10px 0 10px 0;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.botonenviar {
+    width: 100%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    color: white;
+    background-color: #bd8620;
+}
+
+.checkboxvai {
+    margin: 5px 10px 24px 0;
+    text-align: right;
+    font-size: 12px;
+}
+
+#frmlogin {
+    left: 50px;
+}
+
+#frmregistro {
+    left: 450px;
+}
+
+.caja_popup {
+    margin-top: 100px;
+    display: none;
+    position: absolute;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.contenedor_popup {
+    border-radius: 5px;
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+a {
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+table {
+    text-align: center;
+    width: 98%;
+    border-collapse: collapse;
+    border: 3px solid black;
+    margin: 50px auto;
+    background: white;
+}
+
+th {
+    background: steelblue;
+    height: 40px;
+    font-weight: lighter;
+    text-shadow: 0 1px 0 #38678f;
+    color: white;
+    border: 1px solid #38678f;
+    box-shadow: inset 0px 1px 2px #568ebd;
+    transition: all 0.2s;
+    font-size: 18px;
+}
+
+tr {
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+.txtrecuperar {
+    font-size: 14px;
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    background-color: #1C62C1;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}

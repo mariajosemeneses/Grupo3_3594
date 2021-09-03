@@ -1,0 +1,90 @@
+
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Iniciar sesión</title>
+     <link rel="stylesheet" href="estilo_login.css">
+</head>
+
+
+<body>
+  <div class="ctn-welcome "> 
+        <a href="index.php" style="float:left ; margin-left: 20px ">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <line x1="5" y1="12" x2="11" y2="18" />
+                <line x1="5" y1="12" x2="11" y2="6" />
+            </svg>
+        </a>
+    </div>
+    <div class="cajafuera">
+    <div class="formulariocaja">
+        
+		<!--Formulario para el login -->
+        <form id="frmlogin" class="grupo-entradas" method="POST" action="validacion.php">
+		<div class="logovai"><img src="img/logo_prin.png" ></div>
+		<b><font size=4 color="white"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ff9300" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="7" r="4" />
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+            </svg> Usuario</font>
+        </b>
+        <input type="text" class="cajaentradatexto" name="txtusu" placeholder=" Ingrese su Usuario " required>
+		<b ><font size=4 color="white">&#128274; Contraseña</font></b>
+        <input type="password" class="cajaentradatexto" name="txtpassword" placeholder=" Ingrese su Contraseña " required>
+        <div class="checkboxvai"><a onclick="abrirform()">Recuperar contraseña</a></div>
+        <button  onclick="bienvenida.php" type="submit" class="botonenviar" name="btnloginx"><b>Iniciar sesión</b></button>
+        </form>
+	
+        </div>
+    </div>
+    <script>
+    var x = document.getElementById("frmlogin");
+    var z = document.getElementById("btnvai");
+	var textcolor1=document.getElementById("vaibtnlogin");
+	textcolor1.style.color="white";
+    textcolor2.style.color="black";
+
+        
+        
+            function loginvai()
+		{
+			
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+			textcolor1.style.color="white";
+			textcolor2.style.color="black";
+
+        }
+		
+		function abrirform() {
+  document.getElementById("formrecuperar").style.display = "block";
+  
+}
+
+function cancelarform() {
+  document.getElementById("formrecuperar").style.display = "none";
+}
+    </script>
+<div class="caja_popup" id="formrecuperar">
+  <form action="recuperar.php" class="contenedor_popup" method="POST">
+        <table>
+		<tr><th colspan="2">Recuperar contraseña</th></tr>
+            <tr> 
+                <td><b>&#128231; Correo</b></td>
+                <td><input type="email" name="txtcorreo" required class="cajaentradatexto"></td>
+            </tr>
+            <tr> 	
+               <td colspan="2">
+				   <button type="button" onclick="cancelarform()" class="txtrecuperar">Cancelar</button>
+				   <input class="txtrecuperar" type="submit" name="btnrecuperar" value="Enviar" onClick="javascript: return confirm('¿Deseas enviar tu contraseña a tu correo?');">
+			</td>
+            </tr>
+        </table>
+    </form>
+	</div>
+</body>
+</html>

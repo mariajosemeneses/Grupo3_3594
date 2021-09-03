@@ -1,0 +1,248 @@
+    @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+    body {
+        background: url(bg.jpg) no-repeat center top;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .logo-welcome {
+        text-align: center;
+    }
+    
+    .navbar {
+        background: rgb(14, 13, 12);
+    }
+    
+    .nav-link {
+        color: rgb(248, 247, 247);
+        font-size: 20px;
+    }
+    
+    .form-inline a {
+        color: rgb(255, 255, 255);
+    }
+    
+    .needs-validation {
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(228, 135, 29);
+    }
+    
+    .d-flex {
+        color: rgb(10, 10, 10);
+        font-weight: normal;
+    }
+    
+    .mb {
+        text-align: center;
+        margin-left: 20px;
+        font-size: 25px;
+        text-shadow: -1px -1px 1px rgb(0, 0, 0), 0px 4px 1px rgb(10, 9, 9), 4px 4px 5px #070707, 0px 0px 7px rgb(212, 153, 26);
+        color: white;
+    }
+    
+    .btn {
+        width: 100%;
+        padding: 10px 30px;
+        cursor: pointer;
+        display: block;
+        margin: auto;
+        border: 0;
+        outline: none;
+        border-radius: 10px;
+        border: 1px solid black;
+        font-weight: bold;
+        font-size: 18px;
+        color: rgb(2, 2, 2);
+        background-color: rgb(228, 135, 29);
+    }
+    
+    .form-control {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 3px solid rgb(7, 7, 6);
+    }
+    
+    .custom-control-label {
+        color: white;
+    }
+    
+    .listo h1 {
+        text-align: center;
+        margin-left: 20px;
+        font-size: 50px;
+        font-family: 'Crete Round', serif;
+        text-shadow: -1px -1px 1px rgb(0, 0, 0), 0px 4px 1px rgb(10, 9, 9), 4px 4px 5px #070707, 0px 0px 7px rgb(247, 246, 244);
+        color: rgb(228, 135, 29);
+    }
+    
+    .listo p {
+        text-align: center;
+        margin-left: 20px;
+        font-size: 30px;
+        font-family: 'Rampart One', cursive;
+        color: rgb(243, 241, 240);
+    }
+
+    .boton_f{
+        text-decoration:none;
+        font-weight: 600;
+        font-size: 20px;
+        color:#333333;
+        padding-top:15px;
+        padding-bottom:15px;
+        padding-left:40px;
+        padding-right:40px;
+        background-color:#FFD27D;
+        border-color: #d8d8d8;
+        border-width: 3px;
+        border-style: solid;
+        border-radius:35px;
+      }
+
+      body {
+        /*position: relative;*/
+        /*width: 16cm;  */
+        /*height: 29.7cm; */
+        /*margin: 0 auto; */
+        /*color: #555555;*/
+        /*background: #FFFFFF; */
+        font-family: Arial, sans-serif; 
+        /*font-size: 15px; */
+        /*font-family: SourceSansPro;*/
+      }
+      
+      #logo{
+        float: left;
+        margin-top: 1%;
+        margin-left: 2%;
+        margin-right: 2%;
+      }
+      
+      #imagen{
+        width: 150px;
+      }
+      
+      #datos{
+
+        float: center;
+        margin-top: 0%;
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 16px;
+      }
+      
+      #encabezado{
+        text-align: center;
+        margin-right: 25%;
+        font-size: 15px;
+      }
+      
+      #fact{
+        /*position: relative;*/
+
+        float: left;
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 20px;
+      }
+      
+      section{
+        clear: left;
+      }
+      
+      #cliente{
+        text-align: left;
+      }
+      
+      #facliente{
+        width: 40%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 15px;
+      }
+      
+      #fac, #fv, #fa{
+        color: #000000;
+        font-size: 15px;
+      }
+      
+      #facliente thead{
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid #000000;  
+      }
+      
+      #facvendedor{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 15px;
+      }
+      
+      #facvendedor thead{
+        padding: 20px;
+        background: #2183E3;
+        text-align: center;
+        border-bottom: 1px solid #FFFFFF;  
+      }
+      
+      #facarticulo{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-bottom: 15px;
+      }
+      
+      #facarticulo thead{
+        padding: 20px;
+        background: #2183E3;
+        text-align: center;
+        border-bottom: 1px solid #FFFFFF;  
+      }
+      
+      #gracia{
+       text-align: center; 
+      }
+      
+.stylebody{
+    
+    background-color: rgb(46, 48, 48);
+    background-blend-mode: soft-light;
+    width: 100%;
+    height: 100%;
+    color:rgb(0, 0, 0);
+    width: min(40rem,100%);
+    margin:0 auto;
+    padding: 6rem;
+    background-color: rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+    -moz-box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+    box-shadow: 0px 5px 15px 0px rgb(0, 0, 0);
+    border-radius: .8rem;
+}
+
+.bodyF{
+    background-color: rgb(46, 48, 48);
+    background-blend-mode: soft-light;
+    width: 100%;
+    height: 100%;
+    color:rgb(0, 0, 0);
+}
+
+.ctn{
+    width: 100%;
+    max-width: 2500px;
+    text-align: center;
+    color: white;
+    font-size: 19px;
+    padding: 05px;
+    margin: -10px;
+    margin-top: 0px;
+    background: black;
+}

@@ -3,6 +3,91 @@
     require_once('./inc/config.php');    
     require_once('./inc/helpers.php');  
 
+    if(isset($_GET['product']) && !empty($_GET['product']) && is_numeric($_GET['product']))
+    {
+        $sql = "SELECT p.*,pdi.img from products p
+            INNER JOIN product_images pdi ON pdi.product_id = p.id WHERE pdi.is_featured =:featured AND p.id =:productID";
+        $handle = $db->prepare($sql);
+        $params = [
+                ':featured'=>1,
+                ':productID' =>$_GET['product'],
+            ];
+        $handle->execute($params);
+        if($handle->rowCount() == 1 )
+        {
+            $getProductData = $handle->fetch(PDO::FETCH_ASSOC);
+            $imgUrl = PRODUCT_IMG_URL.str_replace(' ','-',strtolower($getProductData ['product_name']))."/".$getProductData ['img'];
+        }
+        else
+        {
+            $error = '404! No record found';
+        }
+
+    }
+    else
+    {
+        $error = '404! No record found';
+    }
+
+    if(isset($_POST['add_to_cart']) && $_POST['add_to_cart'] == 'add to cart')
+    {
+        $productID = intval($_POST['product_id']);
+        $productQty = intval($_POST['product_qty']);
+        
+        $sql = "SELECT p.*,pdi.img from products p
+            INNER JOIN product_images pdi ON pdi.product_id = p.id WHERE pdi.is_featured =:featured AND p.id =:productID";
+
+        $prepare = $db->prepare($sql);
+        
+        $params = [
+                ':featured'=>1,
+                ':productID' =>$productID,
+            ];
+        
+        $prepare->execute($params);
+        $fetchProduct = $prepare->fetch(PDO::FETCH_ASSOC);
+
+        $calculateTotalPrice = number_format($productQty * $fetchProduct['price'],2);
+        
+        $cartArray = [
+            'product_id' =>$productID,
+            'qty' => $productQty,
+            'product_name' =>$fetchProduct['product_name'],
+            'product_price' => $fetchProduct['price'],
+            'precio_total' => $calculateTotalPrice,
+            'product_img' =>$fetchProduct['img']
+        ];
+        
+        if(isset($_SESSION['cart_items']) && !empty($_SESSION['cart_items']))
+        {
+            $productIDs = [];
+            foreach($_SESSION['cart_items'] as $cartKey => $cartItem)
+            {
+                $productIDs[] = $cartItem['product_id'];
+                if($cartItem['product_id'] == $productID)
+                {
+                    $_SESSION['cart_items'][$cartKey]['qty'] = $productQty;
+                    $_SESSION['cart_items'][$cartKey]['precio_total'] = $calculateTotalPrice;
+                    break;
+                }
+            }
+
+            if(!in_array($productID,$productIDs))
+            {
+                $_SESSION['cart_items'][]= $cartArray;
+            }
+
+            $successMsg = true;
+            
+        }
+        else
+        {
+            $_SESSION['cart_items'][]= $cartArray;
+            $successMsg = true;
+        }
+
+    }
+
     $sql = "SELECT p.*,pdi.img from products p
                     INNER JOIN product_images pdi ON pdi.product_id = p.id
                     WHERE pdi.is_featured = 1";
@@ -14,6 +99,7 @@
 	$metaDesc = 'Demo PHP shopping cart get products from database';
     include('layouts/header.php');
 ?>
+
     <div class="row">
         <?php
         foreach($getAllProducts as $product)

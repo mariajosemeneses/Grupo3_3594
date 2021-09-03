@@ -10,7 +10,11 @@
    // }
 
     require 'conexion.php';
-    $conn = new mysqli("localhost","root","","base");
+    $conn = new mysqli("localhost","root","","base
+    
+    
+    
+    ");
     
 
     $consulta = "SELECT * FROM login WHERE id = ${id}";
@@ -84,14 +88,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Datos</title>
-    <link rel = "preland" href="../../css/styleCss.css" as = "styleCss">
-    <link href="../../css/styleCss.css" rel = "stylesheet">
+    <link rel = "preland" href="actualizar.css" as = "styleCss">
+    <link href="actualizar.css" rel = "stylesheet">
 </head>
 <body class="stylebody" body topmargin="0 ">
     <div class="ctn">
         <p>
-            <img src="../../img/logo.png" style="float:left " alt=" " class="logo" class="title"><b>ACTUALIZAR DATOS</b>
-            <a href="modificar.php" style="float:right ; margin-right: 20px ">
+            <img src="img/logo(1)_opt.png" style="float:left " alt=" " class="logo" class="title"><b>ACTUALIZAR DATOS</b>
+            <a href="perfil.php" style="float:right ; margin-right: 20px ">
                 <svg xmlns="http://www.w3.org/2000/svg " class="icon-tabler-logout " width="28 " height="28 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round " stroke-linejoin="round ">
                             <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
                             <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2 " />

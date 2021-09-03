@@ -77,7 +77,7 @@
             <p>
 
                 <br>
-                <a href=" # "><svg xmlns="http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-tools-kitchen-2 " width="80 " height="80 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round
+                <a href="../admin/propiedades/modificar.php"><svg xmlns="http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-tools-kitchen-2 " width="80 " height="80 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round
         " stroke-linejoin="round ">
                 <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
                 <path d="M19 3v12h-5c-.023 -3.681 .184 -7.406 5 -12zm0 12v6h-1v-3m-10 -14v17m-3 -17v3a3 3 0 1 0 6 0v-3 " />
@@ -91,7 +91,7 @@
             <p>
 
                 <br>
-                <a href=" # "><svg xmlns="http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-businessplan " width="80 " height="80 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round
+                <a href="../../detalle_orden.php"><svg xmlns="http://www.w3.org/2000/svg " class="icon icon-tabler icon-tabler-businessplan " width="80 " height="80 " viewBox="0 0 24 24 " stroke-width="1.5 " stroke="#ffffff " fill="none " stroke-linecap="round
         " stroke-linejoin="round ">
                     <path stroke="none " d="M0 0h24v24H0z " fill="none "/>
                         <ellipse cx="16 " cy="6 " rx="5 " ry="3 " />
